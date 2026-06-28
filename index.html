@@ -3,116 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novo | Premium Cleaning Solutions by Unicam</title>
+    <title>Novo | Unicam Industrial Corporation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="brand-logo">NOVO</div>
-        <p class="factory-tag">Manufactured by Unicam Industrial Corporation Pakistan</p>
+    <div class="announcement-bar">
+        📞 Factory Helpline: +92 (0) 3XX XXXXXXX | 📍 Factory Location: Sargodha, Pakistan
+    </div>
+
+    <header class="main-navbar">
+        <div class="logo-container" onclick="showPage('home')">
+            <span class="brand-logo">NOVO</span>
+            <span class="sub-logo">BY UNICAM</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#" onclick="showPage('home')">Home</a>
+            <a href="#" onclick="showPage('handwash')">Handwash</a>
+            <a href="#" onclick="showPage('toilet')">Toilet Cleaner</a>
+            <a href="#" onclick="showPage('dishwash')">Dishwashers</a>
+            <a href="#" onclick="showPage('surf')">Surf & Powders</a>
+        </nav>
     </header>
 
-    <section class="hero-banner">
-        <h2>Kills 99.9% of Germs. Brilliant Clean.</h2>
-        <p>Explore our factory-fresh range of advanced household cleaners, handwashes, and surf powders engineered for ultimate protection and freshness.</p>
-    </section>
-
-    <div class="category-container">
-        <h3 class="category-title handwash-header">🧴 Liquid Handwashes</h3>
-        <div class="product-grid">
-            
-            <div class="product-card handwash-card">
-                <div class="img-placeholder">🧴</div>
-                <h4>Novo Naturals Handwash</h4>
-                <p class="variant">Lavender Calm (500ml)</p>
-                <p class="desc">Premium antibacterial formula infused with a soothing lavender fragrance. Keeps hands soft and prevents dryness.</p>
-                <button class="view-btn">Product Details</button>
+    <main id="page-home" class="page-content active">
+        <section class="welcome-hero">
+            <div class="hero-overlay">
+                <h1>Welcome to Novo Premium Cleaners</h1>
+                <p>Engineered by Unicam Industrial Corporation to deliver 99.9% germ protection and immaculate shine to your home and business.</p>
+                <button class="cta-btn" onclick="showPage('handwash')">Explore Product Catalog</button>
             </div>
+        </section>
 
-            <div class="product-card handwash-card">
-                <div class="img-placeholder">🌿</div>
-                <h4>Novo Naturals Handwash</h4>
-                <p class="variant">Aloe Fresh & Cucumber (500ml)</p>
-                <p class="desc">Nourishing formula with natural extracts. Kills 99.9% of germs while gently cleansing and maintaining essential moisture.</p>
-                <button class="view-btn">Product Details</button>
+        <section class="factory-info-section">
+            <div class="info-card">
+                <h3>📍 Our Factory Location</h3>
+                <p><strong>Unicam Industrial Corporation Pakistan</strong></p>
+                <p>Located strategically near Bhatta Chowk Bypass Road, Sargodha, Punjab, Pakistan.</p>
+                <p>Our state-of-the-art manufacturing plant processes high-efficiency chemical formulations to provide international standard household cleaning agents.</p>
             </div>
+            <div class="info-card contact-card">
+                <h3>📞 Commercial Inquiries & Helpline</h3>
+                <p>For distributors, wholesale bookings, or institutional orders, connect with our Sargodha sales office:</p>
+                <ul>
+                    <li><strong>Official Helpline:</strong> +92 (0) 3XX XXXXXXX</li>
+                    <li><strong>Factory Email:</strong> unicampakistan@gmail.com</li>
+                    <li><strong>Official Domain:</strong> www.unicam.pk</li>
+                </ul>
+            </div>
+        </section>
 
+        <section class="quick-categories">
+            <h2>Browse Collections</h2>
+            <div class="category-circle-grid">
+                <div class="circle-item" onclick="showPage('handwash')">
+                    <div class="circle-icon">🧴</div>
+                    <p>Handwash</p>
+                </div>
+                <div class="circle-item" onclick="showPage('toilet')">
+                    <div class="circle-icon">🚽</div>
+                    <p>Toilet Gel</p>
+                </div>
+                <div class="circle-item" onclick="showPage('dishwash')">
+                    <div class="circle-icon">🍋</div>
+                    <p>Dishwash</p>
+                </div>
+                <div class="circle-item" onclick="showPage('surf')">
+                    <div class="circle-icon">🧺</div>
+                    <p>Surf & Laundry</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-handwash" class="page-content">
+        <div class="category-header-banner handwash-banner">
+            <h2>Naturals Liquid Handwashes</h2>
+            <p>Moisturizing and skin-safe antibacterial formulas</p>
         </div>
-    </div>
-
-    <div class="category-container">
-        <h3 class="category-title toilet-header">🚽 Toilet Cleaners</h3>
-        <div class="product-grid">
-            
-            <div class="product-card toilet-card">
-                <div class="img-placeholder">🔵</div>
-                <h4>Novo Toilet Cleaner</h4>
-                <p class="variant">Ultra Power Gel (750ml)</p>
-                <p class="desc">Ultra Power Gel that kills 99.9% of germs, removes tough stains, and eliminates limescale, leaving your toilet sparkling clean.</p>
-                <button class="view-btn">Product Details</button>
+        <div class="shop-grid">
+            <div class="item-card">
+                <div class="image-box purple-bg">🧴</div>
+                <h4>Novo Naturals Lavender Calm</h4>
+                <p class="pack-size">500 ml Bottle</p>
+                <p class="specs">Antibacterial defense, moisture-rich formula, long-lasting aroma.</p>
+                <button class="order-btn">Inquire Packaging</button>
             </div>
-
-        </div>
-    </div>
-
-    <div class="category-container">
-        <h3 class="category-title dishwash-header">🍋 Dishwashers & Liquids</h3>
-        <div class="product-grid">
-            
-            <div class="product-card dishwash-card">
-                <div class="img-placeholder">🍋</div>
-                <h4>Novo Dishwash Liquid</h4>
-                <p class="variant">Lemon Fresh (1000ml)</p>
-                <p class="desc">Boosted with 3X grease-cutting power and real lemon extracts. Cuts through stubborn grime instantly for a spotless shine.</p>
-                <button class="view-btn">Product Details</button>
+            <div class="item-card">
+                <div class="image-box green-bg">🌿</div>
+                <h4>Novo Naturals Aloe Fresh & Cucumber</h4>
+                <p class="pack-size">500 ml Bottle</p>
+                <p class="specs">Refreshes and cools skin while maintaining essential moisture barriers.</p>
+                <button class="order-btn">Inquire Packaging</button>
             </div>
-
         </div>
-    </div>
+    </main>
 
-    <div class="category-container">
-        <h3 class="category-title surf-header">🧺 Washing Powders (Surf)</h3>
-        <div class="product-grid">
-            
-            <div class="product-card surf-card">
-                <div class="img-placeholder">📦</div>
+    <main id="page-toilet" class="page-content">
+        <div class="category-header-banner toilet-banner">
+            <h2>Surface & Toilet Cleaners</h2>
+            <p>Ultra power gels engineered for complete sanitation</p>
+        </div>
+        <div class="shop-grid">
+            <div class="item-card">
+                <div class="image-box red-bg">🔵</div>
+                <h4>Novo Toilet Cleaner - Ultra Power Gel</h4>
+                <p class="pack-size">750 ml Squeeze Bottle</p>
+                <p class="specs">Kills 99.9% germs, absolute limescale destruction, 10x deep stain removal action.</p>
+                <button class="order-btn">Inquire Packaging</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="page-dishwash" class="page-content">
+        <div class="category-header-banner dishwash-banner">
+            <h2>Dishwashing Liquids & Concentrates</h2>
+            <p>High active grease cutting power blends</p>
+        </div>
+        <div class="shop-grid">
+            <div class="item-card">
+                <div class="image-box yellow-bg">🍋</div>
+                <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
+                <p class="pack-size">1000 ml Eco-Pack</p>
+                <p class="specs">3X grease cutting power with real natural lemon extracts. Spotless gleam, completely soft on skin.</p>
+                <button class="order-btn">Inquire Packaging</button>
+            </div>
+        </div>
+    </main>
+
+    <main id="page-surf" class="page-content">
+        <div class="category-header-banner surf-banner">
+            <h2>Washing Powders & Surf Solutions</h2>
+            <p>Advanced brightness technology for fabric protection</p>
+        </div>
+        <div class="shop-grid">
+            <div class="item-card">
+                <div class="image-box blue-bg">📦</div>
                 <h4>Novo Automatic Surf</h4>
-                <p class="variant">Top & Front Load Powder</p>
-                <p class="desc">Advanced stain-lifting formulation designed for washing machines. Dissolves quickly and keeps fabrics bright and fragrant.</p>
-                <button class="view-btn">Product Details</button>
+                <p class="pack-size">Machine Special Formulation</p>
+                <p class="specs">Top and front load compatibility. Low residue, intensive fiber enzyme extraction.</p>
+                <button class="order-btn">Inquire Packaging</button>
             </div>
-
-            <div class="product-card surf-card">
-                <div class="img-placeholder">🧺</div>
+            <div class="item-card">
+                <div class="image-box blue-bg">🧺</div>
                 <h4>Novo Supreme Hand-Wash Surf</h4>
-                <p class="variant">Regular Laundry Powder</p>
-                <p class="desc">Formulated with strong cleaning agents that lift tough dirt effortlessly while staying gentle on hands and colored fabrics.</p>
-                <button class="view-btn">Product Details</button>
+                <p class="pack-size">Regular Household Powder</p>
+                <p class="specs">Lifts embedded soils gracefully without damaging fabric dye structures.</p>
+                <button class="order-btn">Inquire Packaging</button>
             </div>
-
         </div>
-    </div>
-
-    <div class="category-container">
-        <h3 class="category-title detergent-header">🧪 Detergents & Other Cleaners</h3>
-        <div class="product-grid">
-            
-            <div class="product-card detergent-card">
-                <div class="img-placeholder">🧪</div>
-                <h4>Novo Multi-Surface Detergent</h4>
-                <p class="variant">All-Purpose Cleaner</p>
-                <p class="desc">Concentrated liquid formula engineered by Unicam for deep floor cleaning and general industrial sanitization tasks.</p>
-                <button class="view-btn">Product Details</button>
-            </div>
-
-        </div>
-    </div>
+    </main>
 
     <footer>
-        <p>Manufactured by: UNICAM Industrial Corporation Pakistan</p>
-        <p>Contact: unicampakistan@gmail.com | Website: www.unicam.pk</p>
+        <p>© 2026 Unicam Industrial Corporation Pakistan. All Rights Reserved.</p>
+        <p>Bhatta Chowk Bypass Road, Sargodha.</p>
     </footer>
 
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show requested page
+            const targetedPage = document.getElementById('page-' + pageId);
+            if(targetedPage) {
+                targetedPage.classList.add('active');
+                window.scrollTo(0, 0); // View page from top
+            }
+        }
+    </script>
 </body>
 </html>
