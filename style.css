@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f7fafc;
+    background-color: #f4f7f6;
     color: #2d3748;
 }
 
@@ -10,84 +10,115 @@ header {
     background: #ffffff;
     padding: 20px;
     text-align: center;
-    border-bottom: 3px solid #3182ce;
+    border-bottom: 4px solid #0056b3;
 }
 
 .brand-logo {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1a365d;
-    letter-spacing: 3px;
+    color: #0f2d59;
+    letter-spacing: 4px;
 }
 
 .factory-tag {
     font-size: 0.85rem;
     color: #718096;
     margin: 5px 0 0 0;
+    font-weight: 500;
 }
 
 .hero-banner {
-    background: linear-gradient(135deg, #3182ce 0%, #2b6cb0 100%);
+    background: linear-gradient(135deg, #0056b3 0%, #00a4e4 100%);
     color: white;
     text-align: center;
-    padding: 50px 20px;
-    margin-bottom: 30px;
+    padding: 60px 20px;
 }
 
-.hero-banner h2 { margin: 0 0 10px 0; font-size: 2.2rem; }
+.hero-banner h2 { margin: 0 0 10px 0; font-size: 2.4rem; }
+.hero-banner p { font-size: 1.1rem; max-width: 700px; margin: 0 auto; opacity: 0.9; }
 
 .category-container {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1140px;
+    margin: 50px auto;
     padding: 0 20px;
 }
 
 .category-title {
-    font-size: 1.5rem;
-    color: #2c5282;
-    border-bottom: 2px solid #e2e8f0;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    font-size: 1.6rem;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    font-weight: 600;
 }
+
+/* Color Coding for Headers */
+.handwash-header { color: #6b46c1; border-bottom: 3px solid #6b46c1; }
+.toilet-header { color: #e53e3e; border-bottom: 3px solid #e53e3e; }
+.dishwash-header { color: #d69e2e; border-bottom: 3px solid #d69e2e; }
+.surf-header { color: #3182ce; border-bottom: 3px solid #3182ce; }
+.detergent-header { color: #319795; border-bottom: 3px solid #319795; }
 
 .product-grid {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .product-card {
     background: white;
-    border-radius: 8px;
+    border-radius: 12px;
     padding: 25px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    border-top: 4px solid #48bb78; /* Green top for handwash */
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
 }
 
-.toilet-theme { border-top: 4px solid #e53e3e; } /* Red for toilet cleaner */
-.dish-theme { border-top: 4px solid #ecc94b; } /* Yellow for dishwash */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
 
-.product-card h4 { margin: 0 0 10px 0; color: #1a202c; font-size: 1.3rem; }
-.desc { font-size: 0.9rem; color: #4a5568; line-height: 1.5; height: 70px; }
-.benefit { font-weight: bold; font-size: 0.9rem; color: #2b6cb0; margin: 15px 0; }
+/* Color Coding Card Accent Tops */
+.handwash-card { border-top: 5px solid #6b46c1; }
+.toilet-card { border-top: 5px solid #e53e3e; }
+.dishwash-card { border-top: 5px solid #d69e2e; }
+.surf-card { border-top: 5px solid #3182ce; }
+.detergent-card { border-top: 5px solid #319795; }
+
+.img-placeholder {
+    background: #f7fafc;
+    font-size: 3rem;
+    text-align: center;
+    padding: 30px 0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h4 { margin: 0; color: #1a202c; font-size: 1.25rem; }
+.variant { font-size: 0.9rem; color: #718096; font-weight: bold; margin: 4px 0 12px 0; }
+.desc { font-size: 0.88rem; color: #4a5568; line-height: 1.5; margin: 0 0 20px 0; flex-grow: 1; }
 
 .view-btn {
     width: 100%;
-    background: #3182ce;
+    background: #0056b3;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 11px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
 }
+
+.view-btn:hover { background: #004085; }
 
 footer {
     background: #1a202c;
     color: #a0aec0;
     text-align: center;
-    padding: 20px;
-    margin-top: 60px;
+    padding: 30px 20px;
+    margin-top: 80px;
     font-size: 0.9rem;
+    line-height: 1.6;
 }
+footer p { margin: 5px 0; }
