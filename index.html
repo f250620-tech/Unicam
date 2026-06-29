@@ -38,8 +38,8 @@
             align-items: center;
             padding: 15px 5%;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: relative; /* FIX: Added relative position so z-index works */
-            z-index: 9999;       /* FIX: Raised z-index to stay above all pages */
+            position: relative;
+            z-index: 10000;
         }
 
         .logo-container {
@@ -68,6 +68,8 @@
             font-weight: 600;
             margin-left: 20px;
             font-size: 14px;
+            display: inline-block;
+            cursor: pointer;
             transition: color 0.2s ease;
         }
 
@@ -421,7 +423,7 @@
             color: #94a3b8;
         }
 
-        /* Control Router Visibility */
+        /* Control Router Visibility Styles */
         .page-content {
             display: none;
         }
@@ -451,11 +453,11 @@
             <span class="sub-logo">INDUSTRIAL CORPORATION</span>
         </div>
         <nav class="nav-links">
-            <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
-            <a href="javascript:void(0)" onclick="showPage('handwash')">Handwash</a>
-            <a href="javascript:void(0)" onclick="showPage('toilet')">Toilet Cleaner</a>
-            <a href="javascript:void(0)" onclick="showPage('dishwash')">Dishwashers</a>
-            <a href="javascript:void(0)" onclick="showPage('surf')">Surf & Powders</a>
+            <a onclick="showPage('home')">Home</a>
+            <a onclick="showPage('handwash')">Handwash</a>
+            <a onclick="showPage('toilet')">Toilet Cleaner</a>
+            <a onclick="showPage('dishwash')">Dishwashers</a>
+            <a onclick="showPage('surf')">Surf & Powders</a>
         </nav>
     </header>
 
@@ -608,4 +610,65 @@
             <div class="item-card">
                 <div class="image-box blue-bg">🧺</div>
                 <h4>Unicam Automatic Surf</h4>
-                <p class="brand-tag">Line:
+                <p class="brand-tag">Line: Unicam Premium</p>
+                <p class="pack-size">High Efficiency Powder</p>
+                <p class="specs">Special industrial formulation for automatic washing machines. Complete soil extraction system.</p>
+                <button class="order-btn" onclick="openInquiry('Unicam Automatic Surf')">Inquire Bulk Supply</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="professional-footer">
+        <div class="footer-grid-container">
+            <div class="footer-column">
+                <h4>About Unicam</h4>
+                <p>Unicam Industrial Corporation Pakistan is a progressive manufacturing plant utilizing state-of-the-art processing systems to synthesize premium consumer and commercial cleaning supplies.</p>
+            </div>
+            <div class="footer-column">
+                <h4>📍 Factory Location</h4>
+                <p><strong>Manufacturing Unit:</strong></p>
+                <p>Near Bhatta Chowk Bypass Road,<br>Sargodha, Punjab,<br>Pakistan.</p>
+            </div>
+            <div class="footer-column">
+                <h4>📞 Contact Helplines</h4>
+                <p>For distributor registration, retail wholesale allocations, or bulk raw supply inquiries:</p>
+                <ul class="footer-contact-list">
+                    <li><strong>Mobile:</strong> +92 300 9706670</li>
+                    <li><strong>Mobile:</strong> +92 300 1816670</li>
+                    <li><strong>Email:</strong> unicampakistan@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-strip">
+            <p>© 2026 Unicam Industrial Corporation Pakistan. All Intellectual Property and Brands Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToProducts() {
+            const position = document.getElementById('manufacturing-lines');
+            if(position) { position.scrollIntoView({ behavior: 'smooth' }); }
+        }
+
+        function showPage(pageId) {
+            // Find every content block layer layout
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Activate selection layout frame explicitly
+            const targetedPage = document.getElementById('page-' + pageId);
+            if(targetedPage) {
+                targetedPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function openInquiry(productName) {
+            const message = encodeURIComponent("Hello Unicam Corporate Team, I would like to inquire about bulk ordering allocations for: " + productName);
+            window.open("https://wa.me/923009706670?text=" + message, "_blank");
+        }
+    </script>
+</body>
+</html>
