@@ -32,11 +32,11 @@
                 <h1 class="giant-headline">UNICAM</h1>
                 <p class="sub-headline-tag">Industrial Corporation Pakistan</p>
                 <p class="hero-description">Manufacturing international standard household cleaners, liquid handwashes, and high-efficiency washing powders engineered for ultimate hygiene and protection.</p>
-                <button class="cta-btn" onclick="showPage('handwash')">Explore Our Collections</button>
+                <button class="cta-btn" onclick="scrollToProducts()">Explore Our Collections</button>
             </div>
         </section>
 
-        <section class="quick-categories">
+        <section id="manufacturing-lines" class="quick-categories">
             <h2>Our Manufacturing Lines</h2>
             <div class="category-circle-grid">
                 <div class="circle-item" onclick="showPage('handwash')">
@@ -70,16 +70,16 @@
                 <h4>Novo Naturals Lavender Calm</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">Antibacterial defense, moisture-rich formula, long-lasting aroma.</p>
-                <button class="order-btn">Inquire Packaging</button>
+                <p class="specs">99.9% Germ Protection. Infused with a relaxing lavender fragrance. Keeps hands soft and smooth.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Handwash Lavender (500ml)')">Inquire Bulk Supply</button>
             </div>
             <div class="item-card">
                 <div class="image-box green-bg">🌿</div>
                 <h4>Novo Naturals Aloe Fresh & Cucumber</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">Refreshes and cools skin while maintaining essential moisture barriers.</p>
-                <button class="order-btn">Inquire Packaging</button>
+                <p class="specs">99.9% Germ Kill with skin-nourishing aloe vera and crisp cucumber active extracts.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Handwash Aloe Fresh (500ml)')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -91,12 +91,20 @@
         </div>
         <div class="shop-grid">
             <div class="item-card">
-                <div class="image-box red-bg">🔵</div>
-                <h4>Novo Toilet Cleaner - Ultra Power Gel</h4>
+                <div class="image-box red-bg">🚽</div>
+                <h4>Novo Toilet Cleaner - Power Gel</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">750 ml Squeeze Bottle</p>
-                <p class="specs">Kills 99.9% germs, absolute limescale destruction, 10x deep stain removal action.</p>
-                <button class="order-btn">Inquire Packaging</button>
+                <p class="specs">Kills 99.9% of germs. Advanced thick formula for total stain removal and crystal clear sanitation.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Toilet Cleaner (750ml)')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box red-bg">🚽</div>
+                <h4>Novo Toilet Cleaner - Power Gel</h4>
+                <p class="brand-tag">Line: Novo Series</p>
+                <p class="pack-size">500 ml Squeeze Bottle</p>
+                <p class="specs">Kills 99.9% of germs. Compact, high-efficiency formulation perfect for targeted sanitation control.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Toilet Cleaner (500ml)')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -112,8 +120,16 @@
                 <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">1000 ml Eco-Pack</p>
-                <p class="specs">3X grease cutting power with real natural lemon extracts. Spotless gleam, completely soft on skin.</p>
-                <button class="order-btn">Inquire Packaging</button>
+                <p class="specs">Boosted with 3X grease-cutting power and real lemon juice extracts for heavy kitchen usage.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Dishwash Lemon (1000ml)')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box yellow-bg">🍋</div>
+                <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
+                <p class="brand-tag">Line: Novo Series</p>
+                <p class="pack-size">500 ml Handy Bottle</p>
+                <p class="specs">Powerful active grease reduction standard matrix. Soft on skin, tough on oil residues.</p>
+                <button class="order-btn" onclick="openInquiry('Novo Dishwash Lemon (500ml)')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -128,17 +144,9 @@
                 <div class="image-box blue-bg">📦</div>
                 <h4>Unicam Automatic Surf</h4>
                 <p class="brand-tag">Line: Unicam Premium</p>
-                <p class="pack-size">Machine Special Formulation</p>
-                <p class="specs">Top and front load compatibility. Low residue, intensive fiber enzyme extraction.</p>
-                <button class="order-btn">Inquire Packaging</button>
-            </div>
-            <div class="item-card">
-                <div class="image-box blue-bg">🧺</div>
-                <h4>Unicam Supreme Hand-Wash Surf</h4>
-                <p class="brand-tag">Line: Unicam Regular</p>
-                <p class="pack-size">Regular Household Powder</p>
-                <p class="specs">Lifts embedded soils gracefully without damaging fabric dye structures.</p>
-                <button class="order-btn">Inquire Packaging</button>
+                <p class="pack-size">High Efficiency Powder</p>
+                <p class="specs">Special industrial formulation for automatic washing machines. Complete soil extraction system.</p>
+                <button class="order-btn" onclick="openInquiry('Unicam Automatic Surf')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -175,24 +183,33 @@
     </footer>
 
     <script>
+        function scrollToProducts() {
+            const position = document.getElementById('manufacturing-lines');
+            if(position) {
+                position.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
         function showPage(pageId) {
-            // Hide all views explicitly
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => {
                 page.style.display = 'none';
                 page.classList.remove('active');
             });
             
-            // Show target view cleanly
             const targetedPage = document.getElementById('page-' + pageId);
             if(targetedPage) {
                 targetedPage.style.display = 'block';
-                // Small delay ensures browser registers layout swap perfectly
                 setTimeout(() => {
                     targetedPage.classList.add('active');
                 }, 10);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
+        }
+
+        function openInquiry(productName) {
+            const message = encodeURIComponent("Hello Unicam Corporate Team, I would like to inquire about bulk ordering allocations for: " + productName);
+            window.open("https://wa.me/923009706670?text=" + message, "_blank");
         }
     </script>
 </body>
