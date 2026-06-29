@@ -63,18 +63,16 @@
             letter-spacing: 1px;
         }
 
-        .nav-links button {
-            background: none;
-            border: none;
+        .nav-links a {
+            text-decoration: none;
             color: #444;
             font-weight: 600;
             margin-left: 20px;
             font-size: 14px;
-            cursor: pointer;
             transition: color 0.2s ease;
         }
 
-        .nav-links button:hover {
+        .nav-links a:hover {
             color: #0056b3;
         }
 
@@ -375,7 +373,7 @@
             background-color: #20ba5a;
         }
 
-        /* Corporate Footer Layout */
+        /* Corporate Site Footer Layout */
         .professional-footer {
             background-color: #0c2340;
             color: #f8f9fa;
@@ -424,7 +422,7 @@
             color: #94a3b8;
         }
 
-        /* Control Router Visibility */
+        /* Fixed Visibility Router System */
         .page-content {
             display: none;
         }
@@ -437,7 +435,7 @@
         @media (max-width: 768px) {
             .welcome-content-grid { grid-template-columns: 1fr; }
             .main-navbar { flex-direction: column; gap: 15px; text-align: center; }
-            .nav-links button { margin: 0 10px; font-size: 13px; }
+            .nav-links a { margin: 0 10px; font-size: 13px; }
             .giant-headline { font-size: 38px; }
         }
     </style>
@@ -454,11 +452,11 @@
             <span class="sub-logo">INDUSTRIAL CORPORATION</span>
         </div>
         <nav class="nav-links">
-            <button onclick="showPage('home')">Home</button>
-            <button onclick="showPage('handwash')">Handwash</button>
-            <button onclick="showPage('toilet')">Toilet Cleaner</button>
-            <button onclick="showPage('dishwash')">Dishwashers</button>
-            <button onclick="showPage('surf')">Surf & Powders</button>
+            <a href="javascript:void(0)" onclick="showPage('home')">Home</a>
+            <a href="javascript:void(0)" onclick="showPage('handwash')">Handwash</a>
+            <a href="javascript:void(0)" onclick="showPage('toilet')">Toilet Cleaner</a>
+            <a href="javascript:void(0)" onclick="showPage('dishwash')">Dishwashers</a>
+            <a href="javascript:void(0)" onclick="showPage('surf')">Surf & Powders</a>
         </nav>
     </header>
 
@@ -467,4 +465,31 @@
             <div class="hero-overlay">
                 <h1 class="giant-headline">UNICAM</h1>
                 <p class="sub-headline-tag">Industrial Corporation Pakistan</p>
-                <p class="hero-description">Manufacturing international
+                <p class="hero-description">Manufacturing international standard household cleaners, liquid handwashes, and high-efficiency washing powders engineered for ultimate hygiene and protection.</p>
+                <button class="cta-btn" onclick="scrollToProducts()">Explore Our Collections</button>
+            </div>
+        </section>
+
+        <section id="manufacturing-lines" class="quick-categories">
+            <h2>Our Manufacturing Lines</h2>
+            <div class="category-circle-grid">
+                <div class="circle-item" onclick="showPage('handwash')">
+                    <div class="circle-icon">🧴</div>
+                    <p>Handwash</p>
+                </div>
+                <div class="circle-item" onclick="showPage('toilet')">
+                    <div class="circle-icon">🚽</div>
+                    <p>Toilet Gel</p>
+                </div>
+                <div class="circle-item" onclick="showPage('dishwash')">
+                    <div class="circle-icon">🍋</div>
+                    <p>Dishwash</p>
+                </div>
+                <div class="circle-item" onclick="showPage('surf')">
+                    <div class="circle-icon">🧺</div>
+                    <p>Surf & Laundry</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="brand-welcome-
