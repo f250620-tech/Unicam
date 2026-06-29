@@ -15,6 +15,7 @@
     <header class="main-navbar">
         <div class="logo-container" onclick="showPage('home')">
             <span class="brand-logo">UNICAM</span>
+            <span class="sub-logo">INDUSTRIAL CORPORATION</span>
         </div>
         <nav class="nav-links">
             <a href="#" onclick="showPage('home')">Home</a>
@@ -175,13 +176,22 @@
 
     <script>
         function showPage(pageId) {
+            // Hide all views explicitly
             const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => page.classList.remove('active'));
+            pages.forEach(page => {
+                page.style.display = 'none';
+                page.classList.remove('active');
+            });
             
+            // Show target view cleanly
             const targetedPage = document.getElementById('page-' + pageId);
             if(targetedPage) {
-                targetedPage.classList.add('active');
-                window.scrollTo(0, 0);
+                targetedPage.style.display = 'block';
+                // Small delay ensures browser registers layout swap perfectly
+                setTimeout(() => {
+                    targetedPage.classList.add('active');
+                }, 10);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         }
     </script>
