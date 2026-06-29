@@ -63,16 +63,18 @@
             letter-spacing: 1px;
         }
 
-        .nav-links a {
-            text-decoration: none;
+        .nav-links button {
+            background: none;
+            border: none;
             color: #444;
             font-weight: 600;
             margin-left: 20px;
             font-size: 14px;
+            cursor: pointer;
             transition: color 0.2s ease;
         }
 
-        .nav-links a:hover {
+        .nav-links button:hover {
             color: #0056b3;
         }
 
@@ -286,7 +288,7 @@
         .category-header-banner h2 { font-size: 32px; margin-bottom: 5px; }
         .category-header-banner p { font-size: 16px; opacity: 0.9; }
 
-        /* Product E-Commerce Shop Layout Grid */
+        /* Product Grid Layout */
         .shop-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
@@ -373,7 +375,7 @@
             background-color: #20ba5a;
         }
 
-        /* Professional Clean Corporate Footer Layout */
+        /* Corporate Footer Layout */
         .professional-footer {
             background-color: #0c2340;
             color: #f8f9fa;
@@ -424,18 +426,18 @@
 
         /* Control Router Visibility */
         .page-content {
-            display: none !important;
+            display: none;
         }
 
         .page-content.active {
-            display: block !important;
+            display: block;
         }
 
         /* Responsive UI fixes */
         @media (max-width: 768px) {
             .welcome-content-grid { grid-template-columns: 1fr; }
             .main-navbar { flex-direction: column; gap: 15px; text-align: center; }
-            .nav-links a { margin: 0 10px; font-size: 13px; }
+            .nav-links button { margin: 0 10px; font-size: 13px; }
             .giant-headline { font-size: 38px; }
         }
     </style>
@@ -452,11 +454,11 @@
             <span class="sub-logo">INDUSTRIAL CORPORATION</span>
         </div>
         <nav class="nav-links">
-            <a href="#" onclick="showPage('home')">Home</a>
-            <a href="#" onclick="showPage('handwash')">Handwash</a>
-            <a href="#" onclick="showPage('toilet')">Toilet Cleaner</a>
-            <a href="#" onclick="showPage('dishwash')">Dishwashers</a>
-            <a href="#" onclick="showPage('surf')">Surf & Powders</a>
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('handwash')">Handwash</button>
+            <button onclick="showPage('toilet')">Toilet Cleaner</button>
+            <button onclick="showPage('dishwash')">Dishwashers</button>
+            <button onclick="showPage('surf')">Surf & Powders</button>
         </nav>
     </header>
 
@@ -465,118 +467,4 @@
             <div class="hero-overlay">
                 <h1 class="giant-headline">UNICAM</h1>
                 <p class="sub-headline-tag">Industrial Corporation Pakistan</p>
-                <p class="hero-description">Manufacturing international standard household cleaners, liquid handwashes, and high-efficiency washing powders engineered for ultimate hygiene and protection.</p>
-                <button class="cta-btn" onclick="scrollToProducts()">Explore Our Collections</button>
-            </div>
-        </section>
-
-        <section id="manufacturing-lines" class="quick-categories">
-            <h2>Our Manufacturing Lines</h2>
-            <div class="category-circle-grid">
-                <div class="circle-item" onclick="showPage('handwash')">
-                    <div class="circle-icon">🧴</div>
-                    <p>Handwash</p>
-                </div>
-                <div class="circle-item" onclick="showPage('toilet')">
-                    <div class="circle-icon">🚽</div>
-                    <p>Toilet Gel</p>
-                </div>
-                <div class="circle-item" onclick="showPage('dishwash')">
-                    <div class="circle-icon">🍋</div>
-                    <p>Dishwash</p>
-                </div>
-                <div class="circle-item" onclick="showPage('surf')">
-                    <div class="circle-icon">🧺</div>
-                    <p>Surf & Laundry</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="brand-welcome-section">
-            <div class="welcome-wrapper">
-                <div class="welcome-title-area">
-                    <span class="welcome-badge">Welcome to Unicam</span>
-                    <h2>UNICAM INDUSTRIAL CORPORATION</h2>
-                    <div class="accent-line"></div>
-                </div>
-                <div class="welcome-content-grid">
-                    <div class="welcome-text-block">
-                        <p class="lead-text">A Warm Welcome to Our Valued Customers, Partners, and Distributors.</p>
-                        <p>At Unicam Industrial Corporation, we take immense pride in manufacturing international standard household cleaning products, antibacterial liquid handwashes, and premium washing powders right here in Sargodha, Pakistan. Every single bottle and batch that leaves our manufacturing plant is engineered with high-purity raw materials to bring absolute hygiene, protection, and premium care straight to your home or commercial enterprise.</p>
-                        <p>We are dedicated to building long-term relationships based on trust, unmatched chemical effectiveness, and uncompromising safety standards. Whether you are browsing our catalog for your home essentials or seeking reliable bulk corporate supplies, we welcome you to experience a new standard of clean.</p>
-                    </div>
-                    <div class="welcome-highlights">
-                        <div class="highlight-card">
-                            <span class="hl-icon">✓</span>
-                            <div>
-                                <h4>Premium Formulations</h4>
-                                <p>Safe on skin, tough on dirt, and completely biodegradable solutions.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-card">
-                            <span class="hl-icon">✓</span>
-                            <div>
-                                <h4>Factory-Direct Quality</h4>
-                                <p>Strict quality assurance protocols directly from our Sargodha unit.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-card">
-                            <span class="hl-icon">✓</span>
-                            <div>
-                                <h4>Bulk Supply Capabilities</h4>
-                                <p>Seamless logistics and customized wholesale packaging configurations.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <main id="page-handwash" class="page-content">
-        <div class="category-header-banner handwash-banner">
-            <h2>Liquid Handwash Collection</h2>
-            <p>Premium antibacterial formulas manufactured by Unicam</p>
-        </div>
-        <div class="shop-grid">
-            <div class="item-card">
-                <div class="image-box">
-                    <img src="lavender.jpg" alt="Novo Lavender" class="product-image">
-                </div>
-                <h4>Novo Naturals Lavender Calm</h4>
-                <p class="brand-tag">Line: Novo Series</p>
-                <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">99.9% Germ Protection. Infused with a relaxing lavender fragrance. Keeps hands soft and smooth.</p>
-                <button class="order-btn" onclick="openInquiry('Novo Handwash Lavender (500ml)')">Inquire Bulk Supply</button>
-            </div>
-            <div class="item-card">
-                <div class="image-box">
-                    <img src="aloe.jpg" alt="Novo Aloe Fresh" class="product-image">
-                </div>
-                <h4>Novo Naturals Aloe Fresh & Cucumber</h4>
-                <p class="brand-tag">Line: Novo Series</p>
-                <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">99.9% Germ Kill with skin-nourishing aloe vera and crisp cucumber active extracts.</p>
-                <button class="order-btn" onclick="openInquiry('Novo Handwash Aloe Fresh (500ml)')">Inquire Bulk Supply</button>
-            </div>
-        </div>
-    </main>
-
-    <main id="page-toilet" class="page-content">
-        <div class="category-header-banner toilet-banner">
-            <h2>Surface & Toilet Sanitation Gels</h2>
-            <p>Heavy-duty chemical formulations for absolute hygiene</p>
-        </div>
-        <div class="shop-grid">
-            <div class="item-card">
-                <div class="image-box">
-                    <img src="toilet.jpg" alt="Novo Toilet Cleaner" class="product-image">
-                </div>
-                <h4>Novo Toilet Cleaner - Power Gel</h4>
-                <p class="brand-tag">Line: Novo Series</p>
-                <p class="pack-size">750 ml Squeeze Bottle</p>
-                <p class="specs">Kills 99.9% of germs. Advanced thick formula for total stain removal and crystal clear sanitation.</p>
-                <button class="order-btn" onclick="openInquiry('Novo Toilet Cleaner (750ml)')">Inquire Bulk Supply</button>
-            </div>
-        </div>
-    </main>
+                <p class="hero-description">Manufacturing international
