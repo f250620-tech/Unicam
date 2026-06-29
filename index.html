@@ -308,8 +308,8 @@
         }
 
         .image-box {
-            height: 200px;
-            background-color: #f9fafb;
+            height: 220px;
+            background-color: #ffffff;
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -317,6 +317,12 @@
             margin-bottom: 15px;
             overflow: hidden;
             border: 1px solid #f3f4f6;
+        }
+
+        .product-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
         }
 
         .blue-bg { font-size: 64px; background-color: #eff6ff; }
@@ -534,7 +540,9 @@
         </div>
         <div class="shop-grid">
             <div class="item-card">
-                <div class="image-box">🧴</div>
+                <div class="image-box">
+                    <img src="lavender.jpg" alt="Novo Lavender" class="product-image">
+                </div>
                 <h4>Novo Naturals Lavender Calm</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">500 ml Bottle</p>
@@ -542,7 +550,9 @@
                 <button class="order-btn" onclick="openInquiry('Novo Handwash Lavender (500ml)')">Inquire Bulk Supply</button>
             </div>
             <div class="item-card">
-                <div class="image-box">🧴</div>
+                <div class="image-box">
+                    <img src="aloe.jpg" alt="Novo Aloe Fresh" class="product-image">
+                </div>
                 <h4>Novo Naturals Aloe Fresh & Cucumber</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">500 ml Bottle</p>
@@ -559,7 +569,9 @@
         </div>
         <div class="shop-grid">
             <div class="item-card">
-                <div class="image-box">🚽</div>
+                <div class="image-box">
+                    <img src="toilet.jpg" alt="Novo Toilet Cleaner" class="product-image">
+                </div>
                 <h4>Novo Toilet Cleaner - Power Gel</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">750 ml Squeeze Bottle</p>
@@ -576,7 +588,9 @@
         </div>
         <div class="shop-grid">
             <div class="item-card">
-                <div class="image-box">🍋</div>
+                <div class="image-box">
+                    <img src="dishwasher.jpg" alt="Novo Dishwash" class="product-image">
+                </div>
                 <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">1000 ml Eco-Pack</p>
@@ -641,17 +655,4 @@
                 page.classList.remove('active');
             });
             
-            const targetedPage = document.getElementById('page-' + pageId);
-            if(targetedPage) {
-                targetedPage.classList.add('active');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        }
-
-        function openInquiry(productName) {
-            const message = encodeURIComponent("Hello Unicam Corporate Team, I would like to inquire about bulk ordering allocations for: " + productName);
-            window.open("https://wa.me/923009706670?text=" + message, "_blank");
-        }
-    </script>
-</body>
-</html>
+            const targetedPage = document.getElementById('
