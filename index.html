@@ -62,25 +62,29 @@
             letter-spacing: 1px;
         }
 
-       .nav-links a {
+      .nav-links a {
     text-decoration: none;
     color: #0c2340;        /* Deep professional corporate blue text */
     font-weight: 600;
-    margin-left: 12px;
     font-size: 14px;
     display: inline-block;
     cursor: pointer;
     
-    /* Elegant button padding and background shape */
-    padding: 8px 16px;
-    background-color: #f1f5f9;  /* Soft, clean off-white grey background */
-    border-radius: 6px;         /* Sleek, slightly rounded corners */
+    /* Elegant adjacent padding and crisp border separators */
+    padding: 10px 20px;
+    background-color: #f1f5f9;       /* Soft grey background */
+    border-right: 2px solid #0c2340; /* The dark blue separating line */
     transition: all 0.2s ease-in-out;
+}
+
+/* Remove the line from the very last button so it looks clean */
+.nav-links a:last-child {
+    border-right: none;
 }
 
 .nav-links a:hover {
     color: #ffffff;
-    background-color: #0056b3;  /* Smoothly shifts to your brand blue when hovered */
+    background-color: #0056b3; /* Brand blue when hovered */
 }
 
 
