@@ -424,11 +424,11 @@
 
         /* Control Router Visibility */
         .page-content {
-            display: none;
+            display: none !important;
         }
 
         .page-content.active {
-            display: block;
+            display: block !important;
         }
 
         /* Responsive UI fixes */
@@ -580,79 +580,3 @@
             </div>
         </div>
     </main>
-
-    <main id="page-dishwash" class="page-content">
-        <div class="category-header-banner dishwash-banner">
-            <h2>Dishwashing Liquids & Concentrates</h2>
-            <p>High active grease cutting power blends</p>
-        </div>
-        <div class="shop-grid">
-            <div class="item-card">
-                <div class="image-box">
-                    <img src="dishwasher.jpg" alt="Novo Dishwash" class="product-image">
-                </div>
-                <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
-                <p class="brand-tag">Line: Novo Series</p>
-                <p class="pack-size">1000 ml Eco-Pack</p>
-                <p class="specs">Boosted with 3X grease-cutting power and real lemon juice extracts for heavy kitchen usage.</p>
-                <button class="order-btn" onclick="openInquiry('Novo Dishwash Lemon (1000ml)')">Inquire Bulk Supply</button>
-            </div>
-        </div>
-    </main>
-
-    <main id="page-surf" class="page-content">
-        <div class="category-header-banner surf-banner">
-            <h2>Washing Powders & Surf Solutions</h2>
-            <p>Advanced brightness technology for fabric protection</p>
-        </div>
-        <div class="shop-grid">
-            <div class="item-card">
-                <div class="image-box blue-bg">🧺</div>
-                <h4>Unicam Automatic Surf</h4>
-                <p class="brand-tag">Line: Unicam Premium</p>
-                <p class="pack-size">High Efficiency Powder</p>
-                <p class="specs">Special industrial formulation for automatic washing machines. Complete soil extraction system.</p>
-                <button class="order-btn" onclick="openInquiry('Unicam Automatic Surf')">Inquire Bulk Supply</button>
-            </div>
-        </div>
-    </main>
-
-    <footer class="professional-footer">
-        <div class="footer-grid-container">
-            <div class="footer-column">
-                <h4>About Unicam</h4>
-                <p>Unicam Industrial Corporation Pakistan is a progressive manufacturing plant utilizing state-of-the-art processing systems to synthesize premium consumer and commercial cleaning supplies.</p>
-            </div>
-            <div class="footer-column">
-                <h4>📍 Factory Location</h4>
-                <p><strong>Manufacturing Unit:</strong></p>
-                <p>Near Bhatta Chowk Bypass Road,<br>Sargodha, Punjab,<br>Pakistan.</p>
-            </div>
-            <div class="footer-column">
-                <h4>📞 Contact Helplines</h4>
-                <p>For distributor registration, retail wholesale allocations, or bulk raw supply inquiries:</p>
-                <ul class="footer-contact-list">
-                    <li><strong>Mobile:</strong> +92 300 9706670</li>
-                    <li><strong>Mobile:</strong> +92 300 1816670</li>
-                    <li><strong>Email:</strong> unicampakistan@gmail.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom-strip">
-            <p>© 2026 Unicam Industrial Corporation Pakistan. All Intellectual Property and Brands Reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function scrollToProducts() {
-            const position = document.getElementById('manufacturing-lines');
-            if(position) { position.scrollIntoView({ behavior: 'smooth' }); }
-        }
-
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page-content');
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            const targetedPage = document.getElementById('
