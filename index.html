@@ -36,8 +36,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 5%;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             position: relative;
             z-index: 10000;
         }
@@ -46,45 +46,72 @@
             cursor: pointer;
             display: flex;
             flex-direction: column;
+            text-decoration: none;
         }
 
         .brand-logo {
-            font-size: 24px;
-            font-weight: 800;
+            font-size: 48px;
+            font-weight: 900;
             color: #0056b3;
-            letter-spacing: 1.5px;
+            letter-spacing: 1px;
+            line-height: 0.9;
         }
 
         .sub-logo {
-            font-size: 10px;
-            font-weight: 600;
-            color: #666;
-            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #555555;
+            letter-spacing: 2px;
+            margin-top: 6px;
+            text-transform: uppercase;
         }
 
- .nav-links a {
-    text-decoration: none;
-    color: #0c2340;        /* Deep professional corporate blue text */
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    
-    /* Perfect vertical centering inside the block */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Balanced padding for clean block shapes */
-    padding: 12px 20px;
-    background-color: #f1f5f9; /* Soft grey background */
-    line-height: 1;
-    transition: all 0.2s ease-in-out;
-}
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
 
-.nav-links a:hover {
-    color: #ffffff;
-    background-color: #0056b3; /* Sleek hover blue fills block entirely */
-}
+        .nav-links a {
+            text-decoration: none;
+            color: #0c2340;
+            font-weight: 700;
+            font-size: 18px; 
+            letter-spacing: 0.4px;
+            cursor: pointer;
+            padding: 10px 25px;
+            line-height: 1;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease, background-color 0.2s ease;
+            border-right: 2px solid #cbd5e1; 
+        }
+
+        .nav-links a:last-child {
+            border-right: none;
+            padding-right: 0;
+        }
+        
+        .nav-links a:first-child {
+            padding-left: 0;
+        }
+
+        .nav-btn-home:hover { color: #0056b3 !important; }
+        .nav-btn-handwash:hover { color: #0284c7 !important; }
+        .nav-btn-toilet:hover { color: #dc2626 !important; }
+        .nav-btn-dishwash:hover { color: #ca8a04 !important; }
+        .nav-btn-surf:hover { color: #2563eb !important; }
+
+        /* Sections Headings inside Surf Page */
+        .section-division-title {
+            text-align: center;
+            font-size: 24px;
+            color: #0c2340;
+            margin: 40px auto 10px auto;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
         /* Hero Banner Section */
         .welcome-hero {
@@ -125,8 +152,8 @@
             background-color: #00a8ff;
             color: white;
             border: none;
-            padding: 12px 30px;
-            font-size: 15px;
+            padding: 14px 35px;
+            font-size: 16px;
             font-weight: 700;
             border-radius: 25px;
             cursor: pointer;
@@ -188,7 +215,7 @@
             color: #444;
         }
 
-        /* Corporate Content Presentation Section */
+        /* Brand Welcome Section */
         .brand-welcome-section {
             padding: 60px 5%;
             background-color: #f1f5f9;
@@ -296,12 +323,12 @@
         .category-header-banner h2 { font-size: 32px; margin-bottom: 5px; }
         .category-header-banner p { font-size: 16px; opacity: 0.9; }
 
-        /* Product E-Commerce Shop Layout Grid */
+        /* Product Shop Grid Layout */
         .shop-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 320px));
-            gap: 30px;
-            padding: 50px 5%;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
+            gap: 25px;
+            padding: 30px 5% 50px 5%;
             justify-content: center;
         }
 
@@ -318,7 +345,7 @@
         }
 
         .image-box {
-            height: 220px;
+            height: 200px;
             background-color: #ffffff;
             border-radius: 8px;
             display: flex;
@@ -335,12 +362,11 @@
             object-fit: contain;
         }
 
-        .blue-bg { font-size: 64px; background-color: #eff6ff; }
-
         .item-card h4 {
-            font-size: 17px;
+            font-size: 16px;
             color: #111827;
             margin-bottom: 5px;
+            font-weight: 700;
         }
 
         .brand-tag {
@@ -360,10 +386,10 @@
         }
 
         .specs {
-            font-size: 13px;
+            font-size: 12px;
             color: #4b5563;
-            line-height: 1.5;
-            margin-bottom: 20px;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
 
         .order-btn {
@@ -383,7 +409,7 @@
             background-color: #20ba5a;
         }
 
-        /* Professional Clean Corporate Footer Layout */
+        /* Footer Layout */
         .professional-footer {
             background-color: #0c2340;
             color: #f8f9fa;
@@ -432,20 +458,19 @@
             color: #94a3b8;
         }
 
-        /* Control Router Visibility Styles */
         .page-content {
-            display: none;
+            display: none !important;
         }
 
         .page-content.active {
-            display: block;
+            display: block !important;
         }
 
-        /* Responsive UI fixes */
         @media (max-width: 768px) {
             .welcome-content-grid { grid-template-columns: 1fr; }
             .main-navbar { flex-direction: column; gap: 15px; text-align: center; }
-            .nav-links a { margin: 0 10px; font-size: 13px; }
+            .nav-links { flex-wrap: wrap; justify-content: center; }
+            .nav-links a { padding: 8px 14px; font-size: 15px; border-right: none; }
             .giant-headline { font-size: 38px; }
         }
     </style>
@@ -461,12 +486,13 @@
             <span class="brand-logo">UNICAM</span>
             <span class="sub-logo">INDUSTRIAL CORPORATION</span>
         </div>
+        
         <nav class="nav-links">
-            <a onclick="showPage('home')">Home</a>
-            <a onclick="showPage('handwash')">Handwash</a>
-            <a onclick="showPage('toilet')">Toilet Cleaner</a>
-            <a onclick="showPage('dishwash')">Dishwashers</a>
-            <a onclick="showPage('surf')">Surf & Powders</a>
+            <a class="nav-btn-home" onclick="showPage('home')">Home</a>
+            <a class="nav-btn-handwash" onclick="showPage('handwash')">Handwash</a>
+            <a class="nav-btn-toilet" onclick="showPage('toilet')">Toilet Cleaner</a>
+            <a class="nav-btn-dishwash" onclick="showPage('dishwash')">Dishwashers</a>
+            <a class="nav-btn-surf" onclick="showPage('surf')">Surf & Powders</a>
         </nav>
     </header>
 
@@ -513,7 +539,6 @@
                     <div class="welcome-text-block">
                         <p class="lead-text">A Warm Welcome to Our Valued Customers, Partners, and Distributors.</p>
                         <p>At Unicam Industrial Corporation, we take immense pride in manufacturing international standard household cleaning products, antibacterial liquid handwashes, and premium washing powders right here in Sargodha, Pakistan. Every single bottle and batch that leaves our manufacturing plant is engineered with high-purity raw materials to bring absolute hygiene, protection, and premium care straight to your home or commercial enterprise.</p>
-                        <p>We are dedicated to building long-term relationships based on trust, unmatched chemical effectiveness, and uncompromising safety standards. Whether you are browsing our catalog for your home essentials or seeking reliable bulk corporate supplies, we welcome you to experience a new standard of clean.</p>
                     </div>
                     <div class="welcome-highlights">
                         <div class="highlight-card">
@@ -521,20 +546,6 @@
                             <div>
                                 <h4>Premium Formulations</h4>
                                 <p>Safe on skin, tough on dirt, and completely biodegradable solutions.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-card">
-                            <span class="hl-icon">✓</span>
-                            <div>
-                                <h4>Factory-Direct Quality</h4>
-                                <p>Strict quality assurance protocols directly from our Sargodha unit.</p>
-                            </div>
-                        </div>
-                        <div class="highlight-card">
-                            <span class="hl-icon">✓</span>
-                            <div>
-                                <h4>Bulk Supply Capabilities</h4>
-                                <p>Seamless logistics and customized wholesale packaging configurations.</p>
                             </div>
                         </div>
                     </div>
@@ -556,18 +567,8 @@
                 <h4>Novo Naturals Lavender Calm</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">99.9% Germ Protection. Infused with a relaxing lavender fragrance. Keeps hands soft and smooth.</p>
+                <p class="specs">99.9% Germ Protection. Infused with a relaxing lavender fragrance.</p>
                 <button class="order-btn" onclick="openInquiry('Novo Handwash Lavender (500ml)')">Inquire Bulk Supply</button>
-            </div>
-            <div class="item-card">
-                <div class="image-box">
-                    <img src="aloe.jpg.jpg" alt="Novo Aloe Fresh" class="product-image">
-                </div>
-                <h4>Novo Naturals Aloe Fresh & Cucumber</h4>
-                <p class="brand-tag">Line: Novo Series</p>
-                <p class="pack-size">500 ml Bottle</p>
-                <p class="specs">99.9% Germ Kill with skin-nourishing aloe vera and crisp cucumber active extracts.</p>
-                <button class="order-btn" onclick="openInquiry('Novo Handwash Aloe Fresh (500ml)')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -585,7 +586,7 @@
                 <h4>Novo Toilet Cleaner - Power Gel</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">750 ml Squeeze Bottle</p>
-                <p class="specs">Kills 99.9% of germs. Advanced thick formula for total stain removal and crystal clear sanitation.</p>
+                <p class="specs">Advanced thick formula for total stain removal and crystal clear sanitation.</p>
                 <button class="order-btn" onclick="openInquiry('Novo Toilet Cleaner (750ml)')">Inquire Bulk Supply</button>
             </div>
         </div>
@@ -593,8 +594,8 @@
 
     <main id="page-dishwash" class="page-content">
         <div class="category-header-banner dishwash-banner">
-            <h2>Dishwashing Liquids & Concentrates</h2>
-            <p>High active grease cutting power blends</p>
+            <h2>Dishwashing Liquids & Bars</h2>
+            <p>High active grease cutting power formulations</p>
         </div>
         <div class="shop-grid">
             <div class="item-card">
@@ -604,25 +605,163 @@
                 <h4>Novo Dishwash Liquid - Lemon Fresh</h4>
                 <p class="brand-tag">Line: Novo Series</p>
                 <p class="pack-size">1000 ml Eco-Pack</p>
-                <p class="specs">Boosted with 3X grease-cutting power and real lemon juice extracts for heavy kitchen usage.</p>
+                <p class="specs">Boosted with 3X grease-cutting power for heavy kitchen usage.</p>
                 <button class="order-btn" onclick="openInquiry('Novo Dishwash Lemon (1000ml)')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-d.png" alt="Laa Jwab Dish soap" class="product-image">
+                </div>
+                <h4>Laa Jwab Dishwashing Bar</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">Standard Bar</p>
+                <p class="specs">Antiviral formulation offering superior citrus action for quick oil breakdown.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Dishwashing Bar')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
 
     <main id="page-surf" class="page-content">
         <div class="category-header-banner surf-banner">
-            <h2>Washing Powders & Surf Solutions</h2>
+            <h2>Washing Powders & Premium Laundry Soaps</h2>
             <p>Advanced brightness technology for fabric protection</p>
         </div>
+
+        <div class="section-division-title">Washing Powders</div>
         <div class="shop-grid">
             <div class="item-card">
-                <div class="image-box blue-bg">🧺</div>
-                <h4>Unicam Automatic Surf</h4>
-                <p class="brand-tag">Line: Unicam Premium</p>
-                <p class="pack-size">High Efficiency Powder</p>
-                <p class="specs">Special industrial formulation for automatic washing machines. Complete soil extraction system.</p>
-                <button class="order-btn" onclick="openInquiry('Unicam Automatic Surf')">Inquire Bulk Supply</button>
+                <div class="image-box">
+                    <img src="focus-0.5.png" alt="Focus 0.5" class="product-image">
+                </div>
+                <h4>Focus Washing Powder (0.5kg)</h4>
+                <p class="brand-tag">Line: Focus</p>
+                <p class="pack-size">500g Economy Pack</p>
+                <p class="specs">Active oxygen formula removes deep set stains effortlessly.</p>
+                <button class="order-btn" onclick="openInquiry('Focus Washing Powder 0.5kg')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="focus-1.png" alt="Focus 1" class="product-image">
+                </div>
+                <h4>Focus Washing Powder (1kg)</h4>
+                <p class="brand-tag">Line: Focus</p>
+                <p class="pack-size">1 kg Family Pack</p>
+                <p class="specs">High performance industrial scale configuration for complete laundry health.</p>
+                <button class="order-btn" onclick="openInquiry('Focus Washing Powder 1kg')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-p (2).png" alt="Lajawab P" class="product-image">
+                </div>
+                <h4>Laa Jwab Detergent Powder (Alt-Form)</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">Premium Pack</p>
+                <p class="specs">Provides extreme dirt extraction profiles with dual brightening agents.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Detergent Powder Variant')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-p.png" alt="Lajawab P" class="product-image">
+                </div>
+                <h4>Laa Jwab Detergent Powder</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">Standard Pack</p>
+                <p class="specs">4-in-1 Action formula optimized for dirt removal and long lasting fragrance.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Detergent Powder')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="ranjha-0.5p.png" alt="Ranjha 0.5p" class="product-image">
+                </div>
+                <h4>Ranjha Washing Powder (0.5kg)</h4>
+                <p class="brand-tag">Line: Ranjha</p>
+                <p class="pack-size">500g Pack</p>
+                <p class="specs">Value pricing structure matched with premium dirt suspension capabilities.</p>
+                <button class="order-btn" onclick="openInquiry('Ranjha Washing Powder 0.5kg')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="ranjha-1p.png" alt="Ranjha 1p" class="product-image">
+                </div>
+                <h4>Ranjha Washing Powder (1kg)</h4>
+                <p class="brand-tag">Line: Ranjha</p>
+                <p class="pack-size">1 kg Pack</p>
+                <p class="specs">High extraction capacity configured for heavy machine loading cycles.</p>
+                <button class="order-btn" onclick="openInquiry('Ranjha Washing Powder 1kg')">Inquire Bulk Supply</button>
+            </div>
+        </div>
+
+        <div class="section-division-title">Premium Laundry Soaps</div>
+        <div class="shop-grid">
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="909.png" alt="909" class="product-image">
+                </div>
+                <h4>909 Laundry Soap (Premium)</h4>
+                <p class="brand-tag">Line: 909 Series</p>
+                <p class="pack-size">Standard Bar</p>
+                <p class="specs">Pakistan's best formulation for maximum lather and tough stain treatment.</p>
+                <button class="order-btn" onclick="openInquiry('909 Laundry Soap Premium')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="909-s.png" alt="909-s" class="product-image">
+                </div>
+                <h4>909-S Economy Laundry Soap</h4>
+                <p class="brand-tag">Line: 909 Series</p>
+                <p class="pack-size">Compact Bar</p>
+                <p class="specs">Traditional formulation delivering exceptional oil stripping performance.</p>
+                <button class="order-btn" onclick="openInquiry('909-S Economy Soap')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="dalda-s.png" alt="Dalda-s" class="product-image">
+                </div>
+                <h4>Dalda-S Laundry Soap</h4>
+                <p class="brand-tag">Line: Dalda Custom</p>
+                <p class="pack-size">Dense Bar</p>
+                <p class="specs">Tough on structural fabric grime while remaining perfectly gentle on hands.</p>
+                <button class="order-btn" onclick="openInquiry('Dalda-S Laundry Soap')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="kirana-s.png" alt="Kirana-s" class="product-image">
+                </div>
+                <h4>Kirana-S Laundry Soap</h4>
+                <p class="brand-tag">Line: Kirana</p>
+                <p class="pack-size">Standard Bar</p>
+                <p class="specs">High formulation density creates enduring bar longevity across washes.</p>
+                <button class="order-btn" onclick="openInquiry('Kirana-S Laundry Soap')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-s.png" alt="Lajawab-s" class="product-image">
+                </div>
+                <h4>Laa Jwab Laundry Soap (V1)</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">White Density Bar</p>
+                <p class="specs">Exceptional optical brightness generation for linen profiles.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Laundry Soap V1')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-s2.png" alt="Lajawab-s2" class="product-image">
+                </div>
+                <h4>Laa Jwab Laundry Soap (V2)</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">Alternative Bar</p>
+                <p class="specs">Extended lipid binding targets greasy soil formations cleanly.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Laundry Soap V2')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="ranjha-s.png" alt="Ranjha-s" class="product-image">
+                </div>
+                <h4>Ranjha-S Premium Laundry Soap</h4>
+                <p class="brand-tag">Line: Ranjha</p>
+                <p class="pack-size">Classic Bar</p>
+                <p class="specs">Traditional reliable cleaning execution for regional municipal water types.</p>
+                <button class="order-btn" onclick="openInquiry('Ranjha-S Laundry Soap')">Inquire Bulk Supply</button>
             </div>
         </div>
     </main>
@@ -631,16 +770,14 @@
         <div class="footer-grid-container">
             <div class="footer-column">
                 <h4>About Unicam</h4>
-                <p>Unicam Industrial Corporation Pakistan is a progressive manufacturing plant utilizing state-of-the-art processing systems to synthesize premium consumer and commercial cleaning supplies.</p>
+                <p>Unicam Industrial Corporation Pakistan is a progressive manufacturing plant utilizing state-of-the-art processing systems to synthesize premium consumer cleaning supplies.</p>
             </div>
             <div class="footer-column">
                 <h4>📍 Factory Location</h4>
-                <p><strong>Manufacturing Unit:</strong></p>
                 <p>Near Bhatta Chowk Bypass Road,<br>Sargodha, Punjab,<br>Pakistan.</p>
             </div>
             <div class="footer-column">
                 <h4>📞 Contact Helplines</h4>
-                <p>For distributor registration, retail wholesale allocations, or bulk raw supply inquiries:</p>
                 <ul class="footer-contact-list">
                     <li><strong>Mobile:</strong> +92 300 9706670</li>
                     <li><strong>Mobile:</strong> +92 300 1816670</li>
@@ -656,19 +793,19 @@
     <script>
         function scrollToProducts() {
             const position = document.getElementById('manufacturing-lines');
-            if(position) { position.scrollIntoView({ behavior: 'smooth' }); }
+            if (position) { 
+                position.scrollIntoView({ behavior: 'smooth' }); 
+            }
         }
 
         function showPage(pageId) {
-            // Find every content block layer layout
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => {
                 page.classList.remove('active');
             });
             
-            // Activate selection layout frame explicitly
             const targetedPage = document.getElementById('page-' + pageId);
-            if(targetedPage) {
+            if (targetedPage) {
                 targetedPage.classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
