@@ -731,4 +731,90 @@
                 <p class="brand-tag">Line: Kirana</p>
                 <p class="pack-size">Standard Bar</p>
                 <p class="specs">High formulation density creates enduring bar longevity across washes.</p>
-                <button class="order-
+                <button class="order-btn" onclick="openInquiry('Kirana-S Laundry Soap')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-s.png" alt="Lajawab-s" class="product-image">
+                </div>
+                <h4>Laa Jwab Laundry Soap (V1)</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">White Density Bar</p>
+                <p class="specs">Exceptional optical brightness generation for linen profiles.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Laundry Soap V1')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="lajawab-s2.png" alt="Lajawab-s2" class="product-image">
+                </div>
+                <h4>Laa Jwab Laundry Soap (V2)</h4>
+                <p class="brand-tag">Line: Laa Jwab</p>
+                <p class="pack-size">Alternative Bar</p>
+                <p class="specs">Extended lipid binding targets greasy soil formations cleanly.</p>
+                <button class="order-btn" onclick="openInquiry('Laa Jwab Laundry Soap V2')">Inquire Bulk Supply</button>
+            </div>
+            <div class="item-card">
+                <div class="image-box">
+                    <img src="ranjha-s.png" alt="Ranjha-s" class="product-image">
+                </div>
+                <h4>Ranjha-S Premium Laundry Soap</h4>
+                <p class="brand-tag">Line: Ranjha</p>
+                <p class="pack-size">Classic Bar</p>
+                <p class="specs">Traditional reliable cleaning execution for regional municipal water types.</p>
+                <button class="order-btn" onclick="openInquiry('Ranjha-S Laundry Soap')">Inquire Bulk Supply</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="professional-footer">
+        <div class="footer-grid-container">
+            <div class="footer-column">
+                <h4>About Unicam</h4>
+                <p>Unicam Industrial Corporation Pakistan is a progressive manufacturing plant utilizing state-of-the-art processing systems to synthesize premium consumer cleaning supplies.</p>
+            </div>
+            <div class="footer-column">
+                <h4>📍 Factory Location</h4>
+                <p>Near Bhatta Chowk Bypass Road,<br>Sargodha, Punjab,<br>Pakistan.</p>
+            </div>
+            <div class="footer-column">
+                <h4>📞 Contact Helplines</h4>
+                <ul class="footer-contact-list">
+                    <li><strong>Mobile:</strong> +92 300 9706670</li>
+                    <li><strong>Mobile:</strong> +92 300 1816670</li>
+                    <li><strong>Email:</strong> unicampakistan@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom-strip">
+            <p>© 2026 Unicam Industrial Corporation Pakistan. All Intellectual Property and Brands Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToProducts() {
+            const position = document.getElementById('manufacturing-lines');
+            if (position) { 
+                position.scrollIntoView({ behavior: 'smooth' }); 
+            }
+        }
+
+        function showPage(pageId) {
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            const targetedPage = document.getElementById('page-' + pageId);
+            if (targetedPage) {
+                targetedPage.classList.add('active');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function openInquiry(productName) {
+            const message = encodeURIComponent("Hello Unicam Corporate Team, I would like to inquire about bulk ordering allocations for: " + productName);
+            window.open("https://wa.me/923009706670?text=" + message, "_blank");
+        }
+    </script>
+</body>
+</html>
