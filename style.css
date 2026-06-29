@@ -7,6 +7,10 @@
     --footer-bg: #111827;
 }
 
+html {
+    scroll-behavior: smooth; /* Enables perfect corporate smooth scroll scrolling */
+}
+
 body {
     font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
     margin: 0;
@@ -130,11 +134,14 @@ body {
     border-radius: 30px;
     cursor: pointer;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: transform 0.2s;
+    transition: transform 0.2s, background-color 0.2s;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-.cta-btn:hover { transform: scale(1.05); }
+.cta-btn:hover { 
+    transform: scale(1.03);
+    background-color: var(--soft-grey);
+}
 
 /* Foodpanda Navigation Grid */
 .quick-categories { max-width: 1140px; margin: 60px auto; text-align: center; padding: 0 20px; }
@@ -154,6 +161,7 @@ body {
     margin: 0 auto 12px auto;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     transition: all 0.2s ease;
+    border: 2px solid transparent;
 }
 .circle-item:hover .circle-icon {
     transform: translateY(-5px);
@@ -170,8 +178,8 @@ body {
 .surf-banner { background: linear-gradient(135deg, #2B6CB0, #4299E1); }
 
 /* Item Grid Structure */
-.shop-grid { max-width: 1140px; margin: 50px auto; display: flex; gap: 25px; flex-wrap: wrap; padding: 0 20px; }
-.item-card { background: #ffffff; border-radius: 12px; padding: 22px; width: 250px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; display: flex; flex-direction: column; }
+.shop-grid { max-width: 1140px; margin: 50px auto; display: flex; gap: 25px; flex-wrap: wrap; padding: 0 20px; justify-content: center; }
+.item-card { background: #ffffff; border-radius: 12px; padding: 22px; width: 260px; box-shadow: 0 4px 12px rgba(0,0,0,0.03); border: 1px solid #E2E8F0; display: flex; flex-direction: column; }
 .brand-tag { font-size: 0.75rem; font-weight: bold; color: #718096; background: var(--soft-grey); padding: 3px 8px; border-radius: 4px; align-self: flex-start; margin: 5px 0; text-transform: uppercase; }
 
 .image-box { font-size: 3.5rem; text-align: center; padding: 35px 0; border-radius: 8px; margin-bottom: 15px; color: #fff; }
@@ -184,7 +192,7 @@ body {
 .item-card h4 { margin: 8px 0 2px 0; font-size: 1.15rem; color: var(--dark-charcoal); }
 .pack-size { font-size: 0.85rem; font-weight: 700; color: var(--accent-sky); margin: 0 0 12px 0; }
 .specs { font-size: 0.88rem; color: var(--text-muted); line-height: 1.45; margin: 0 0 20px 0; flex-grow: 1; }
-.order-btn { background: none; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 10px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+.order-btn { background: none; border: 2px solid var(--primary-blue); color: var(--primary-blue); padding: 11px; font-weight: bold; border-radius: 6px; cursor: pointer; transition: all 0.2s; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
 .order-btn:hover { background: var(--primary-blue); color: white; }
 
 /* Corporate Footer */
