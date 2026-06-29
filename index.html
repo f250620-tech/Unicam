@@ -62,18 +62,25 @@
             letter-spacing: 1px;
         }
 
-      .nav-links a {
+   .nav-links a {
     text-decoration: none;
     color: #0c2340;        /* Deep professional corporate blue text */
     font-weight: 600;
     font-size: 14px;
-    display: inline-block;
     cursor: pointer;
     
-    /* Elegant adjacent padding and crisp border separators */
-    padding: 10px 20px;
+    /* Centers text perfectly and fixes alignment */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Sleeker padding (6px top/bottom, 18px sides) */
+    padding: 6px 18px;
     background-color: #f1f5f9;       /* Soft grey background */
-    border-right: 2px solid #0c2340; /* The dark blue separating line */
+    
+    /* Creates a stylish, inset dividing line instead of stretching full-height */
+    border-right: 2px solid #0c2340; 
+    line-height: 1.2;
     transition: all 0.2s ease-in-out;
 }
 
