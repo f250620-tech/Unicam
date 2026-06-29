@@ -8,7 +8,7 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Enables perfect corporate smooth scroll scrolling */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -143,6 +143,64 @@ body {
     background-color: var(--soft-grey);
 }
 
+/* Corporate Paragraph & Metrics Element Styles */
+.corporate-overview-block {
+    background-color: #ffffff;
+    padding: 60px 5%;
+    border-bottom: 1px solid var(--soft-grey);
+}
+
+.overview-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.corporate-overview-block h3 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.corporate-overview-block p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.metric-box {
+    background-color: #F7FAFC;
+    border-left: 4px solid var(--accent-sky);
+    padding: 15px 25px;
+    border-radius: 0 8px 8px 0;
+}
+
+.metric-box .num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.metric-box .lbl {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 /* Foodpanda Navigation Grid */
 .quick-categories { max-width: 1140px; margin: 60px auto; text-align: center; padding: 0 20px; }
 .quick-categories h2 { color: var(--primary-blue); margin-bottom: 35px; font-weight: 700; }
@@ -207,6 +265,7 @@ body {
 .footer-bottom-strip { border-top: 1px solid #2D3748; text-align: center; padding: 20px 0; font-size: 0.8rem; color: #718096; }
 
 @media(max-width: 768px) {
+    .overview-container { grid-template-columns: 1fr; gap: 30px; }
     .footer-grid-container { grid-template-columns: 1fr; gap: 30px; }
     .giant-headline { font-size: 3.2rem; letter-spacing: 6px; }
 }
