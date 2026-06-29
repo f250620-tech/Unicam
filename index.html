@@ -69,29 +69,31 @@
     font-size: 14px;
     cursor: pointer;
     
-    /* Centers text perfectly and fixes alignment */
+    /* Perfect vertical alignment */
     display: inline-flex;
     align-items: center;
     justify-content: center;
     
-    /* Sleeker padding (6px top/bottom, 18px sides) */
-    padding: 6px 18px;
-    background-color: #f1f5f9;       /* Soft grey background */
+    /* Snug padding so background and line match perfectly */
+    padding: 10px 18px;
+    background-color: #f1f5f9; /* Soft grey background */
     
-    /* Creates a stylish, inset dividing line instead of stretching full-height */
-    border-right: 2px solid #0c2340; 
-    line-height: 1.2;
+    /* A crisp right border line that matches the box height exactly */
+    box-shadow: 2px 0 0 0 #0c2340;
+    
+    line-height: 1;
     transition: all 0.2s ease-in-out;
 }
 
-/* Remove the line from the very last button so it looks clean */
+/* Remove the line from the very last button */
 .nav-links a:last-child {
-    border-right: none;
+    box-shadow: none;
 }
 
 .nav-links a:hover {
     color: #ffffff;
-    background-color: #0056b3; /* Brand blue when hovered */
+    background-color: #0056b3;
+    box-shadow: none; /* Keeps hover states completely clean */
 }
 
 
